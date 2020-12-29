@@ -6,11 +6,11 @@
     integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
     crossorigin="anonymous"
   />
+  <link rel="stylesheet" href="styles.css" />
   <head>
     <title>KringleCON 2020</title>
   </head>
   <body>
-    <div height="15px"></div>
     <div class="container">
       <div
         class="jumbotron jumbotron-fluid text-center shadow p-3 mb-5 bg-white rounded"
@@ -115,6 +115,8 @@
                 </button>
               </div>
             </div>
+
+            <!----------------Dialup--------------------------------->
             <div class="card">
               <img
                 src="images/Dialup.PNG"
@@ -130,11 +132,56 @@
                 </p>
               </div>
               <div class="card-footer">
-                <button type="button" class="btn btn-success">
-                  See This Entry
-                </button>
+                <button
+                type="button"
+                class="btn btn-success"
+                data-bs-toggle="modal"
+                data-bs-target="#dialup"
+              >
+                See This Entry
+              </button>
+              <div
+                class="modal fade"
+                id="dialup"
+                tabindex="-1"
+                aria-labelledby="exampleModalLabel"
+                aria-hidden="true"
+              >
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="dialupup">
+                        Dialup Conversation
+                      </h5>
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                      ></button>
+                    </div>
+                    <div class="modal-body">I think that I am just old enough to clearly remember those ridiculous dial up screeches on my mother's big desktop computer from when I was twelve. All I wanted to do back then was play MathQuest, but each time, there I sat, waiting for the screeches to finish up. Well, all that waiting paid off here in the castle. This bonus dial up challenge, in the form of an old wired telehone, required me to choose the dialup sounds in order in the form of a call and response conversation. </div>
+                    <image src="images/Dialup.PNG"></image>
+                    <div class="modal-body">The elf next to the phone named Fitsy Shortstack gave me the initial phone number to start the handshake convo with the phone. For good measure, the screeches in order are:</div>
+                    <div class="modal-body">"baa DEE brrrr" <br> "aaah" <br> "WEWEWEwrwrrwrr" <br> "beDURRdunditty" <br> "SCHHHRRHHRTHRTR"</div>
+                    <div class="modal-body">Ahh, memories.</div>
+                    <div class="modal-body"></div>
+                    <div class="modal-footer">
+                      <button
+                        type="button"
+                        class="btn btn-secondary"
+                        data-bs-dismiss="modal"
+                      >
+                        Close
+                      </button>
+                    </div>
+                </div>
               </div>
             </div>
+          </div>
+        </div>
+
+             <!-----------------------Elf Code ----------------------------->
             <div class="card">
               <img
                 src="images/ElfCode.PNG"
@@ -150,16 +197,55 @@
                 </p>
               </div>
               <div class="card-footer">
-                <button type="button" class="btn btn-danger">
-                  See This Entry
-                </button>
+                <button
+                type="button"
+                class="btn btn-danger"
+                data-bs-toggle="modal"
+                data-bs-target="#elfCode"
+              >
+                See This Entry
+              </button>
+              <div
+                class="modal fade"
+                id="elfCode"
+                tabindex="-1"
+                aria-labelledby="exampleModalLabel"
+                aria-hidden="true"
+              >
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="90sVideoGame">
+                        Elf Code
+                      </h5>
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                      ></button>
+                    </div>
+                    <div class="modal-body">What a cool game. This JS-powered activity required you to move an elf using only javascript. What's more, with each level you only got a certian number of lines of code to get the elf to the finish line. The code required that you identify how many squares on a grid you wanted to elf to move (and in what direction) and pass that number as an argument through the function (elf.moveLeft(6), elf.moveUp(10), etc.).</div>
+                    <div class="modal-body">To save on your quota of lines you could also store functions as a variable and pass them through functions as well (var pull = elf.pullLever(10) --> elf.getLever(pull)). This was a fun one.</div>
+                    <div class="modal-footer">
+                      <button
+                        type="button"
+                        class="btn btn-secondary"
+                        data-bs-dismiss="modal"
+                      >
+                        Close
+                      </button>
+                    </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-
+        <!-----------------------ROW 2 ------------------------------------->
         <div class="row shadow p-3 mb-5 bg-white rounded">
           <div class="card-group">
+
+         <!-----------------------Linux Primer ----------------------------->
             <div class="card">
               <img
                 src="images/LinuxPrimer.PNG"
@@ -175,11 +261,52 @@
                 </p>
               </div>
               <div class="card-footer">
-                <button type="button" class="btn btn-success">
-                  See This Entry
-                </button>
+                <button
+                type="button"
+                class="btn btn-success"
+                data-bs-toggle="modal"
+                data-bs-target="#linuxPrimer"
+              >
+                See This Entry
+              </button>
+              <div
+                class="modal fade"
+                id="linuxPrimer"
+                tabindex="-1"
+                aria-labelledby="exampleModalLabel"
+                aria-hidden="true"
+              >
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="linux">
+                        Linux Primer
+                      </h5>
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                      ></button>
+                    </div>
+                    <div class="modal-body">This challenge was a straightforward, straight up Linux command line quiz. For every question the player had to find and eliminate munchkins who had stolen all the lollipops and were hiding in the system. To complete the challenge, you had to get all lollipops in one sitting at the terminal. Requested commands included basic navigation such as "ls, pwd, cd, rm, cat, find" and other commands like grep (with some options and wildcards), changing permissions, and killing processes. This was a pleasant challenge, a bit of a breather from some of the more technical, dense, terminal-style ones.
+                       </div>
+                  <div class="modal-footer">
+                      <button
+                        type="button"
+                        class="btn btn-secondary"
+                        data-bs-dismiss="modal"
+                      >
+                        Close
+                      </button>
+                    </div>
+                </div>
               </div>
             </div>
+          </div>
+        </div>
+
+            <!-----------------------Santavator Part 2 ----------------------------->
             <div class="card">
               <img
                 src="images/Santavator2.PNG"
@@ -195,34 +322,79 @@
                 </p>
               </div>
               <div class="card-footer">
-                <button type="button" class="btn btn-danger">
-                  See This Entry
-                </button>
+                <button
+                type="button"
+                class="btn btn-danger"
+                data-bs-toggle="modal"
+                data-bs-target="#missingFloors"
+              >
+                See This Entry
+              </button>
+              <div
+                class="modal fade"
+                id="missingFloors"
+                tabindex="-1"
+                aria-labelledby="exampleModalLabel"
+                aria-hidden="true"
+              >
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="floors">
+                        How I Became Santa
+                      </h5>
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                      ></button>
+                    </div>
+                    <div class="modal-body">
+                        I'd had enough of the wall I'd hit with the Santavator. Three out of five floors - not good enough. I jumped back in the elevator and pulled up the DevTools in Chroms and started digging for anything that might get me the missing button for Floor 1.5 or that would get me past the needed thumbprint for Floor 3.
+                     </div>
+                     <div class="modal-body">I dug...<br> And I dug...<br>And I dug...<br>And I went to bed...<br>And I woke up thinking about it...<br> And decided to go back to the beginning and start digging all over again.</div>
+                     <div class="modal-body">Back on the html page I was looking at the Santavator's button elements and RIGHT. THERE. IN. FRONT. OF. MAH. FACE. There it was. An attribute on my working first-floor button called "data-floor". I didn't need to be sifting through anything, I could just change the data-floor number on my working buttons to go wherever I want! And that's exactly what I did and just like that, I had access to all floors.</div>
+                     <div class="modal-body">The castle was mine!</div>
+                  <div class="modal-footer">
+                      <button
+                        type="button"
+                        class="btn btn-secondary"
+                        data-bs-dismiss="modal"
+                      >
+                        Close
+                      </button>
+                    </div>
+                </div>
               </div>
             </div>
+          </div>
+        </div>
+
+            <!-----------------------How I Became Santa ----------------------------->
             <div class="card">
-              <img src="..." class="card-img-top" alt="..." height="300px" />
+              <img
+                src="images/iamsanta.PNG"
+                class="card-img-top"
+                alt="How I Became Santa"
+                height="300px"
+              />
               <div class="card-body">
-                <h5 class="card-title">Title</h5>
-                <p class="card-text">
-                  Just outside the kitchen there was a 90's-looking video game
-                  machine that offered fun with JavaScript and elves.
-                </p>
+                <h5 class="card-title">How I Became Santa</h5>
+                <p class="card-text">A proxmark, an elf, a door, a light.</p>
               </div>
               <div class="card-footer">
                 <button
                   type="button"
                   class="btn btn-success"
                   data-bs-toggle="modal"
-                  data-bs-target="#exampleModal"
+                  data-bs-target="#beSanta"
                 >
                   See This Entry
                 </button>
-
-                <!-- Modal -->
                 <div
                   class="modal fade"
-                  id="exampleModal"
+                  id="beSanta"
                   tabindex="-1"
                   aria-labelledby="exampleModalLabel"
                   aria-hidden="true"
@@ -230,8 +402,8 @@
                   <div class="modal-dialog">
                     <div class="modal-content">
                       <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">
-                          Modal title
+                        <h5 class="modal-title" id="howIBecameSanta">
+                          How I Became Santa
                         </h5>
                         <button
                           type="button"
@@ -240,8 +412,20 @@
                           aria-label="Close"
                         ></button>
                       </div>
-                      <div class="modal-body">...</div>
-                      <div class="modal-footer">
+                      <div class="modal-body">
+                        Once I gained access to the Workshop on Floor 1.5, I started poking around and found a proxmark on the floor! At that point I knew I was
+                        going to be swiping something from someone. Upon further inspection I noticed that
+                        there was a CLI feature attached to the proxmark. This terminal didn't have the nice, handy-dandy instructions that most of the others had, so I got to thinking - what am I supposed to be stealing?
+                      </div>
+                      <div class="modal-body">
+                        It hit me that I had always seen clusters of other players crowded around the elves in the castle, so I went to the nearest one and opened the proxmark. Which did nothing! So I started looking up proxmark commands and found a GitHub proxmark repo. In there I learned about a command "lf hid read" that I thought might be useful since the fifth challenge was entitled HID Lock. Lo and behond I got something.</lf>
+                      </div>
+                      <div class="modal-body">I scratched down what I got on a piece of paper: a 10 digit number, something fc, and a card number. Initially I wasn't sure what to so with this info, so I tried going up to some of the locked challenges and repeating the same command, which got me absolutely nothing. Next I tried to do the same thing next to some locked doors around the castle. Nothing. Which I realized, honestly, made sense because I wasn't trying to <em>capture</em> something, I was trying to <em>use</em> the creds. So I went back to the proxmark cheat sheet I'd found and sifted through what felt like a million commands until I fell across one that seemed to match up with the info I had gotten "lf hid sim -r ### --fc ### --cn ####".</div>
+                      <img src="images/Proxmark.PNG" />
+                      <div class="modal-body">I quickly scooted up to Santa's Workshop to the first locked door that popped into my mind, and ran that code. Boom, I was in. The newly opened room was dark save for a light at the very end, into which I walked, thinking there might be a challenge under there. No challenge, BUT I was teleported through the wall an out of the creepy painting on the first floor. I could't find my character's avatar so I started moving my mouse and discovered the I WAS SANTA!!!</div>
+                      <div class="modal-body">It was probably 11:50pm at this point, so I guarantee that my happy dance woke the neighbors!</div>
+                    
+                    <div class="modal-footer">
                         <button
                           type="button"
                           class="btn btn-secondary"

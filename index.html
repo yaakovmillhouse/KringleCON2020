@@ -27,8 +27,10 @@
       </div>
 
       <div class="container">
+        <!----------------ROW 1----------------------------->
         <div class="row shadow p-3 mb-5 bg-white rounded">
           <div class="card-group">
+        <!----------------Santa's List---------------------->
             <div class="card">
               <img
                 src="images/List.PNG"
@@ -44,11 +46,56 @@
                 </p>
               </div>
               <div class="card-footer">
-                <button type="button" class="btn btn-success">
-                  See This Entry
-                </button>
+                <button
+                type="button"
+                class="btn btn-success"
+                data-bs-toggle="modal"
+                data-bs-target="#santasList"
+              >
+                See This Entry
+              </button>
+              <div
+                class="modal fade"
+                id="santasList"
+                tabindex="-1"
+                aria-labelledby="exampleModalLabel"
+                aria-hidden="true"
+              >
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="swirl">
+                        Santa's List
+                      </h5>
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                      ></button>
+                    </div>
+                    <div class="modal-body">As I stood on the platform, before stepping onto the gondola that would eventually take me to Santa's Castle, I encountered my first elf. Upon clicking the elf, a helpful little speech bubble popped up and indicated that my first challenge was visible from right here on the platform. I was to look at an image on a earby billboard and determine what Josh Wright wanted for Christmas, based on Santa's list in the image. It seemed to easy to be true. And it was.</div>
+                    <image src="images/List.PNG"></image>
+                    <div class="modal-body">The list was too swirled up to read. After pointless inspection, a steghide investigation, and about 20 downloads of the same picture, it was time to phone a friend. A wise friend indicated to me to me that I might be able to reverse the swirl. So I flipped the original list, cropped out just the swirled list, and set it to be swirled.</div>
+                    <image src="images/Listflipped.png"></image>
+                    <div class="modal-body">The "reverse" swirl untied the text just enough for me to find Josh Wright's name and read, in reverse, that he wanted a proxmark!</div>
+                    <image src="images/ListUnswirled.PNG"></image>
+                    <div class="modal-footer">
+                      <button
+                        type="button"
+                        class="btn btn-secondary"
+                        data-bs-dismiss="modal"
+                      >
+                        Close
+                      </button>
+                    </div>
+                </div>
               </div>
             </div>
+          </div>
+        </div>
+
+            <!---------------S3 Buckets----------------------->
             <div class="card">
               <img
                 src="images/S3Buckets.PNG"
@@ -65,11 +112,57 @@
                 </p>
               </div>
               <div class="card-footer">
-                <button type="button" class="btn btn-danger">
-                  See This Entry
-                </button>
+                <button
+                type="button"
+                class="btn btn-danger"
+                data-bs-toggle="modal"
+                data-bs-target="#s3Buckets"
+              >
+                See This Entry
+              </button>
+              <div
+                class="modal fade"
+                id="s3Buckets"
+                tabindex="-1"
+                aria-labelledby="exampleModalLabel"
+                aria-hidden="true"
+              >
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="aws">
+                        Santa's List
+                      </h5>
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                      ></button>
+                    </div>
+                    <div class="modal-body">Oh boy, the S3 Buckets. First thing inside the castle grounds, and quite an intense welcome. From the terminal, I was given a ruby script called "bucketfinder.rb" and a wordlist. To operate them I ran the worlist against the bucketfinder and it revealed three AWS S3 buckets - all of which were private. The buckets I found were entitled "kringlecastle", "wrapper", and "santa". After trying everything I could think of to get in these buckets, remembered there was an S3 talk offered by the creator of this hack-a-thon, so I went there next and learned that if a bucket was in fact available, I would be notified of its openness upon searching it with the bucketfinder. So these three buckets, no good.</div>
+                    <div class="modal-body">"What if the bucket I'm looking for isn't in my search?" I thought. I ran cat against the wordlist, to find that the only three words in there were the three folders that wouldn't open for me. I needed to add something here.</div>
+                    <div class="modal-body">Remembering that the whole point of this challenge was to fix the "Wrapper3000" I added that to the wordlist. Nothing. Why? Oh yeah, AWS only uses lowercase letters! I switched it to "wrapper3000" and boom, I got a bucket and downloaded its contents!  </div>
+                    <image src="images/S3instructions.PNG"></image>
+                    <div class="modal-body"> Now the hard part. After looking at the package's contents and running the nonsense inside against some ciphers, I figured out it was in base 64 and I sent that to a new file and unzipped it. The resulting file was titled package.text.Z.xz.xxd.tar.bz2. Wow. That's a lot of wrappers. Each of these extensions had to be researched and unwrapped - with the proper options and sometimes sent to a new file to unzip.</div>
+                    <image src="images/S3Buckets.PNG"></image>
+                    <div class="modal-body">I'll be totally transparent and say this took the better part of a day but goodness was it satisfying getting down to the package.txt, which was the answer to submit to complete the challenge. </div>
+                    <div class="modal-footer">
+                      <button
+                        type="button"
+                        class="btn btn-secondary"
+                        data-bs-dismiss="modal"
+                      >
+                        Close
+                      </button>
+                    </div>
+                </div>
               </div>
             </div>
+          </div>
+        </div>
+
+            <!----------------Powering the Santavator----------->
             <div class="card">
               <img
                 src="images/Santavator1.PNG"
@@ -85,16 +178,60 @@
                 </p>
               </div>
               <div class="card-footer">
-                <button type="button" class="btn btn-success">
-                  See This Entry
-                </button>
+                <button
+                type="button"
+                class="btn btn-success"
+                data-bs-toggle="modal"
+                data-bs-target="#powerSantavator"
+              >
+                See This Entry
+              </button>
+              <div
+                class="modal fade"
+                id="powerSantavator"
+                tabindex="-1"
+                aria-labelledby="exampleModalLabel"
+                aria-hidden="true"
+              >
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="brokenSantavator">
+                        Santa's List
+                      </h5>
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                      ></button>
+                    </div>
+                    <div class="modal-body">I spent a fair amount of time exploring all over the first floor of the castle after spending so much time in the courtyard. There was a main room, like a grand lobby, complete with a number of elves with suggestions, a Christmas tree, and an exceedingly creepy portrait of Santa! One of the elves in the entrance suggested that if I found any random items on the ground that I should be sure to pick them up. So I scoured the place and found a bolt, a green light bulb, and a red light bulb. Random, but probably would prove helpful.</div>
+                    <div class="modal-body">I also learned from an elf in the first floor lobby that there were a) multiple floors in the castle and b) that the Santavator which could get me to said floors was broken. But I jumped into the santavator anyway to see if I could poke around.</div>
+                    <div class="modal-body">Inside was just a broken elevator panel, nothing groundbreaking. What <em>was</em> groundbreaking though, was behind the panel. When I opened it up with the provided key I saw three differently-colored sockets and a stream of what looked like mist. To make things more interesting, there was a little legend that indicated the different socket combinations that needed to be powered to get to the different floors.</div> 
+                    <image src="images/legend.PNG"></image>
+                    <div class="modal-body">What was also exciting behind the panel was the fact that all of the "random" items that I'd found around the castle were just sitting there, and could be moved around to manipulate the stream of mist. So I got to work trying to get the red and green sockets powered with the stream using my items. I eventually got them both powered, redirecting the string using my bolt and a piece of candy cane, and was able to go up to the second floor and the roof! On each of those floors I encountered more elves, more challenges, and more items!</div>
+                    <image src="images/Santavator1.PNG"></image>
+                    <div class="modal-footer">
+                      <button
+                        type="button"
+                        class="btn btn-secondary"
+                        data-bs-dismiss="modal"
+                      >
+                        Close
+                      </button>
+                    </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-
+    </div>
+</div>
+        <!-------------------ROW 2------------------------>
         <div class="row shadow p-3 mb-5 bg-white rounded">
           <div class="card-group">
+        <!------------------CAN Bus----------------------->
             <div class="card">
               <img
                 src="images/CANbus.PNG"
@@ -110,12 +247,53 @@
                 </p>
               </div>
               <div class="card-footer">
-                <button type="button" class="btn btn-danger">
-                  See This Entry
-                </button>
-              </div>
+                <button
+                type="button"
+                class="btn btn-danger"
+                data-bs-toggle="modal"
+                data-bs-target="#CANbus"
+              >
+                See This Entry
+              </button>
+              <div
+                class="modal fade"
+                id="CANBus"
+                tabindex="-1"
+                aria-labelledby="exampleModalLabel"
+                aria-hidden="true"
+              >
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="can">
+                        CAN Bus
+                      </h5>
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                      ></button>
+                    </div>
+                    <div class="modal-body">Up on the roof I stumbled upon a challenge called CAN Bus. It was another terminal-based challenge and in it there was a record of the engine idling up and down. Also in the data are
+                        a LOCK signal, an UNLOCK signal, and one more LOCK. My goal was to identify through the very dense log which log item was the UNLOCK moment and submit that item to complete the challenge. I was provided with two items in the terminal, candump.log and a script called runtoanswer. While the log was overwhelming at first, I knew I could grep through it and boil down some of the noise in the log. I noticed that the vast majority of the items in the log began with "244xxxxxx" so I filtered them them out using "grep  -v "244*" candump.log </div>
+                    <image src="images/candump.PNG"></image>
+                    <div class="modal-body">In the shortened log list, there were three outliers (see image). Knowing that there were two moments of LOCK and one moment of UNLOCK, I simply played a game of "One of These Things Is Not Like The Others" to determine that the second outlier had to be the sole UNLOCK moment.</div>
+                    <image src="images/CANbus.PNG"></image>
+                    <div class="modal-footer"></div>
+                      <button
+                        type="button"
+                        class="btn btn-secondary"
+                        data-bs-dismiss="modal"
+                      >
+                        Close
+                    </button>
+                </div>
             </div>
-
+          </div>
+        </div>
+      </div>
+    
             <!----------------Dialup--------------------------------->
             <div class="card">
               <img
@@ -241,7 +419,10 @@
             </div>
           </div>
         </div>
-        <!-----------------------ROW 2 ------------------------------------->
+    
+</div>
+</div>
+        <!-----------------------ROW 3 ------------------------------------->
         <div class="row shadow p-3 mb-5 bg-white rounded">
           <div class="card-group">
 
